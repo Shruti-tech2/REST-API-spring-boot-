@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "182e93c8-5dcc-4a3a-ba59-e98fb0a90388",
+		"name": "StationAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"station_name\": \"Bali Sation\",\r\n    \"station_image\": \"https://th.bing.com/th/id/R.d15b456aba80c4a523cf1f6d3\",\r\n    \"station_pricing\": \"10,000\",\r\n    \"station_address\": \"Bali\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						""
+					]
+				},
+				"description": "To get list of station"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/delete/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"station_name\": \"Bali Sation\",\r\n    \"station_image\": \"https://th.bing.com/th/id/R.d15b456aba80c4a523cf1f6d3\",\r\n    \"station_pricing\": \"10,000\",\r\n    \"station_address\": \"Bali\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"delete",
+						"1"
+					]
+				},
+				"description": "To delete station detail by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/show/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"station_name\": \"Walmart Supercenter\",\r\n    \"station_image\": \"https://th.bing.com/th/id/OIP.qxolQ38qoiySyB5OBd4MxwHaEK?pid=ImgDet&w=2000&h=1125&rs=1\",\r\n    \"station_pricing\": \"5000\",\r\n    \"station_address\": \"America\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/show/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"show",
+						"1"
+					]
+				},
+				"description": "Show station per id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/1/edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"station_name\": \"Bali Sation\",\r\n    \"station_image\": \"https://th.bing.com/th/id/R.d15b456aba80c4a523cf1f6d3\",\r\n    \"station_pricing\": \"10,000\",\r\n    \"station_address\": \"Bali\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/1/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"1",
+						"edit"
+					]
+				},
+				"description": "To edit station details per id, we just need to pass other fileds in body"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"station_name\": \"Bali Sation\",\r\n    \"station_image\": \"https://th.bing.com/th/id/R.d15b456aba80c4a523cf1f6d31dce7e8?rik=2ZT%2baXLkZYcxWg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f01%2fnature-wallpaper-27.jpg&ehk=jIVFSOxLN%2fQKs4hEfZHNWAeXoeXkeEXooP%2fTy9Vwkek%3d&risl=&pid=ImgRaw&r=0\",\r\n    \"station_pricing\": \"10,000\",\r\n    \"station_address\": \"Bali\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						""
+					]
+				},
+				"description": "To add new station details. Station-id is auto generated so we don't need to pass it in body"
+			},
+			"response": []
+		}
+	]
+}
